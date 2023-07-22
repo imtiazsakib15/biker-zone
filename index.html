@@ -13,14 +13,34 @@
     <!-- Tailwind and DaisyUi cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.3.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .manrope {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
 </head>
 
 <body class="font-poppins">
     <!-- Header -->
-    <header class="container mx-auto bg-[url('/images/banner-bg.png')]">
-        <div class="">
+    <header class="container mx-auto hero bg-[url('/images/banner-bg.png')]">
+        <div class="hero-overlay bg-gradient-to-r from-[rgba(24,24,24,.9)] to-[rgba(24, 24, 24, .8)]">
             <!-- Navbar -->
-            <div class="navbar lg:px-32 lg:py-10">
+            <div class="navbar px-3 sm:px-10 lg:px-32 lg:py-10">
                 <div class=" flex-grow">
                     <a class="text-white text-2xl lg:text-4xl font-bold">Biker Zone</a>
                     <div class="dropdown text-white">
@@ -33,25 +53,36 @@
                         </label>
                         <ul tabindex="0"
                             class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box text-white text-base w-52">
-                            <li><a>Home</a></li>
-                            <li><a>Shop</a></li>
-                            <li><a>News</a></li>
-                            <li><a>Contact</a></li>
+                            <li><a class="hover:bg-slate-200">Home</a></li>
+                            <li><a class="hover:bg-slate-200">Shop</a></li>
+                            <li><a class="hover:bg-slate-200">News</a></li>
+                            <li><a class="hover:bg-slate-200">Contact</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="hidden lg:flex">
-                    <ul class="menu menu-horizontal text-white text-base font-medium px-1">
-                        <li><a>Home</a></li>
-                        <li><a>Shop</a></li>
-                        <li><a>News</a></li>
-                        <li><a>Contact</a></li>
+                    <ul class="menu menu-horizontal text-white text-base font-medium space-x-4 px-2">
+                        <li><a class="hover:bg-slate-200">Home</a></li>
+                        <li><a class="hover:bg-slate-200">Shop</a></li>
+                        <li><a class="hover:bg-slate-200">News</a></li>
+                        <li><a class="hover:bg-slate-200">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <a class="btn text-white text-base font-medium">Login</a>
+                    <button
+                        class="btn bg-primary-color hover:bg-primary-color hover:scale-105 text-white text-base lg:text-lg font-bold px-8 border-0">Login</button>
                 </div>
             </div>
+            <!-- Banner -->
+            <section class="text-white space-y-7 text-center sm:text-left justify-center sm:px-10 lg:px-32 pt-20 pb-32">
+                <h1 class="text-4xl lg:text-6xl font-bold w-10/12 md:w-8/12 xl:w-1/2 mx-auto sm:m-0">Keep Your Ride Safe
+                    At Every Time</h1>
+                <p class="w-10/12 md:w-8/12 lg:w-1/2 mx-auto sm:m-0">The Triumph Speed 400, the first motorcycle from
+                    the Bajaj-Triumph partnership, has caused havoc in the Indian market with its Rs 2.23 lakh (for the
+                    first 10,000 customers) and Rs 2.33 lakh (thereafter) price tag (both ex-showroom India). </p>
+                <button
+                    class="btn bg-primary-color hover:bg-primary-color hover:scale-105 text-white text-base lg:text-lg font-bold px-8 border-0">Purchase</button>
+            </section>
         </div>
     </header>
     <!-- Main -->
