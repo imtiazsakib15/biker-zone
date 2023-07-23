@@ -18,7 +18,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-color': '#da373d',
+                        'primary-color': '#E76F51',
                     }
                 }
             }
@@ -37,7 +37,7 @@
 
 <body class="font-poppins">
     <!-- Header -->
-    <header class="2xl:container mx-auto hero bg-[url('/images/banner-bg.png')]">
+    <header class="2xl:container mx-auto hero bg-[url('images/banner-bg.png')]">
         <div class="hero-overlay bg-gradient-to-r from-[rgba(24,24,24,.9)] to-[rgba(24, 24, 24, .8)]">
             <!-- Navbar -->
             <div class="navbar px-3 sm:px-10 lg:px-32 lg:py-10">
@@ -86,7 +86,19 @@
         </div>
     </header>
     <!-- Main -->
-    <main></main>
+    <main>
+        <!-- Featured Bikes Section -->
+        <section class="2xl:container mx-auto text-center my-32 px-3 sm:px-10 lg:px-32">
+            <h2 class="text-4xl lg:text-5xl font-semibold text-black">Fetured Bikes In This Year</h2>
+            <p class="text-primary-color mt-3">Best bike collection</p>
+            <div class="border w-16 mx-auto border-primary-color mb-12"></div>
+            <div class="grid gap-20 place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <img src="images/features-1.jpg" alt="">
+                <img src="images/featured-2.png" alt="">
+                <img src="images/features-1.jpg" alt="">
+            </div>
+        </section>
+    </main>
     <!-- Footer -->
     <footer class="font-manrope"></footer>
 </body>
